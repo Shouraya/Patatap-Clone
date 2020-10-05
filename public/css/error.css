@@ -189,11 +189,6 @@ li a:hover {
     transition: transform ease-in 99999999999s;
 */
 }
-
-.earth-moon{
-    
-}
-
 .object_astronaut{
     animation: rotate-astronaut 200s infinite linear both alternate;
 }
