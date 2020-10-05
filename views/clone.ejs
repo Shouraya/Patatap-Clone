@@ -7,7 +7,128 @@
 	<script type="text/javascript" src="/scripts/paper-full.js"></script> 
 	<!-- Howler JS File -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script> 
-    <script type="text/javascript" src="/scripts/clone.js"></script>
+    <!-- <script type="text/javascript" src="/scripts/clone.js"></script> -->
+    <script type="text/paperscript" canvas="myCanvas">
+        var sound1 = new Howl({
+        urls: ["sounds/bubbles.mp3"]
+        });
+        var sound2 = new Howl({
+        urls: ["sounds/clay.mp3"]
+        });
+        var sound3 = new Howl({
+        urls: ["sounds/confetti.mp3"]
+        });
+        var sound4 = new Howl({
+        urls: ["sounds/corona.mp3"]
+        });
+        var sound5 = new Howl({
+        urls: ["sounds/dotted-spiral.mp3"]
+        });
+        var sound5 = new Howl({
+        urls: ["sounds/flash-1.mp3"]
+        });
+        var sound6 = new Howl({
+        urls: ["sounds/flash-2.mp3"]
+        });
+        var sound7 = new Howl({
+        urls: ["sounds/flash-3.mp3"]
+        });
+        var sound8 = new Howl({
+        urls: ["sounds/glimmer.mp3"]
+        });
+        var sound9 = new Howl({
+        urls: ["sounds/moon.mp3"]
+        });
+        var sound10 = new Howl({
+        urls: ["sounds/pinwheel.mp3"]
+        });
+        var sound11 = new Howl({
+        urls: ["sounds/piston-1.mp3"]
+        });
+        var sound12 = new Howl({
+        urls: ["sounds/piston-2.mp3"]
+        });
+        var sound13 = new Howl({
+        urls: ["sounds/piston-3.mp3"]
+        });
+        var sound14 = new Howl({
+        urls: ["sounds/prism-1.mp3"]
+        });
+        var sound15 = new Howl({
+        urls: ["sounds/prism-2.mp3"]
+        });
+        var sound16 = new Howl({
+        urls: ["sounds/prism-3.mp3"]
+        });
+        var sound17 = new Howl({
+        urls: ["sounds/splits.mp3"]
+        });
+        var sound18 = new Howl({
+        urls: ["sounds/squiggle.mp3"]
+        });
+        var sound19= new Howl({
+        urls: ["sounds/strike.mp3"]
+        });
+        var sound20 = new Howl({
+        urls: ["sounds/suspension.mp3"]
+        });
+        var sound21 = new Howl({
+        urls: ["sounds/timer.mp3"]
+        });
+        var sound22 = new Howl({
+        urls: ["sounds/ufo.mp3"]
+        });
+        var sound23 = new Howl({
+        urls: ["sounds/veil.mp3"]
+        });
+        var sound24 = new Howl({
+        urls: ["sounds/wipe.mp3"]
+        });
+        var sound25 = new Howl({
+        urls: ["sounds/zig-zag.mp3"]
+        });
+        var sound26 = new Howl({
+        urls: ["sounds/flash-2.mp3"]
+        });
+    
+        var circles = [];
+    
+        function onKeyDown(event){
+            var maxPoint = new Point(view.size.width, view.size.height)
+            var randomPoint = Point.random();
+            var point = maxPoint * randomPoint ;
+            //when a key is ressed 
+            var newCircle = new Path.Circle(point,500);
+            if(event.key === 'a'){
+                sound1.play();
+                newCircle.fillColor = "purple";
+            }
+            else if(event.key === 'b'){
+                sound2.play();
+                newCircle.fillColor = "#16a085";
+            }
+            
+            else{
+                newCircle.fillColor = "black";
+            }
+            circles.push(newCircle);
+        }
+    
+    
+    function onFrame(event){
+        for(var i = 0 ; i<circles.length ; i++ ){
+            circles[i].fillColor.hue += 1;
+            circles[i].scale(0.9);
+    
+            //we can remove the circles from array and canvas by the below code however the splice() is not working... IDK why!
+             if(circles[i].area < 1){
+             	circles[i].remove(); //remove circle from the canvas
+             	circles[i].splice(i,1); //remove circle from the array
+             	console.log(circles);
+             }
+        }		
+    }
+    </script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
