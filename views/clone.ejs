@@ -107,8 +107,102 @@
                 sound2.play();
                 newCircle.fillColor = "#16a085";
             }
-            
-            else{
+            else if(event.key === 'c'){
+                sound3.play();
+                newCircle.fillColor = "#1abc9c";
+            }
+            else if(event.key === 'd'){
+                sound4.play();
+                newCircle.fillColor = "#2ecc71";
+            }
+            else if(event.key === 'e'){
+                sound5.play();
+                newCircle.fillColor = "#3498db";
+            }
+            else if(event.key === 'f'){
+                sound6.play();
+                newCircle.fillColor = "#9b59b6";
+            }
+            else if(event.key === 'g'){
+                sound7.play();
+                newCircle.fillColor = "#34495e";
+            }
+            else if(event.key === 'h'){
+                sound8.play();
+                newCircle.fillColor = "#16a085";
+            }
+            else if(event.key === 'i'){
+                sound9.play();
+                newCircle.fillColor = "#27ae60";
+            }
+            else if(event.key === 'j'){
+                sound10.play();
+                newCircle.fillColor = "#8e44ad";
+            }
+            else if(event.key === 'k'){
+                sound11.play();
+                newCircle.fillColor = "#2980b9";
+            }
+            else if(event.key === 'l'){
+                sound12.play();
+                newCircle.fillColor = "#8e44ad";
+            }
+            else if(event.key === 'm'){
+                sound13.play();
+                newCircle.fillColor = "#2c3e50";
+            }
+            else if(event.key === 'n'){
+                sound14.play();
+                newCircle.fillColor = "#27ae60";
+            }
+            else if(event.key === 'o'){
+                sound15.play();
+                newCircle.fillColor = "#2980b9";
+            }
+            else if(event.key === 'p'){
+                sound16.play();
+                newCircle.fillColor = "#16a085";
+            }
+            else if(event.key === 'q'){
+                sound17.play();
+                newCircle.fillColor = "#95a5a6";
+            }
+            else if(event.key === 'r'){
+                sound18.play();
+                newCircle.fillColor = "#f39c12";
+            }
+            else if(event.key === 's'){
+                sound19.play();
+                newCircle.fillColor = "#d35400";
+            }
+            else if(event.key === 't'){
+                sound20.play();
+                newCircle.fillColor = "#0c4f13";
+            }
+            else if(event.key === 'u'){
+                sound21.play();
+                newCircle.fillColor = "#37bfbb";
+            }
+            else if(event.key === 'v'){
+                sound22.play();
+                newCircle.fillColor = "#7d76e3";
+            }
+            else if(event.key === 'w'){
+                sound23.play();
+                newCircle.fillColor = "#c9abde";
+            }
+            else if(event.key === 'x'){
+                sound24.play();
+                newCircle.fillColor = "#b81c93";
+            }
+            else if(event.key === 'y'){
+                sound25.play();
+                newCircle.fillColor = "#c75752";
+            }
+            else if(event.key === 'z'){
+                sound26.play();
+                newCircle.fillColor = "#7d7543";
+            }else{
                 newCircle.fillColor = "black";
             }
             circles.push(newCircle);
@@ -121,11 +215,11 @@
             circles[i].scale(0.9);
     
             //we can remove the circles from array and canvas by the below code however the splice() is not working... IDK why!
-             if(circles[i].area < 1){
-             	circles[i].remove(); //remove circle from the canvas
-             	circles[i].splice(i,1); //remove circle from the array
-             	console.log(circles);
-             }
+            // if(circles[i].area < 1){
+            // 	circles[i].remove(); //remove circle from the canvas
+            // 	circles[i].splice(i,1); //remove circle from the array
+            // 	console.log(circles);
+            // }
         }		
     }
     </script>
